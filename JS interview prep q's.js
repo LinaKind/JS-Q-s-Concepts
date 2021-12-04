@@ -133,3 +133,27 @@ function sumOfTwo(x, y=1) {
 
 console.log(sumOfTwo(10, 10)); //20
 console.log(sumOfTwo(1)); //2
+
+
+//why is JavaScript called a loosely typed/dynamic language
+//variables are not directly associted with any value type and any variable can be assigned and reassigned values
+//of all types
+
+let someVariable = 10;
+console.log(someVariable);
+someVariable = "Now I am a string";
+console.log(someVariable);
+someVariable = true;
+console.log(someVariable);
+
+
+//two ways to make functions
+
+function one() {
+    console.log("Normal fuction");
+}
+
+const two = () => {
+    console.log("Arrow function");
+}
+

@@ -78,3 +78,16 @@ console.log(myCart.items); //undefined --unable to access as private variable
 console.log(myCart.totalItems()); //1
 
 
+//advantages of closures
+/** 
+ * 
+ * currying -> technique of converting a function that takes multiple arguments into a sequence of 
+ * functions that each take a single argument
+ * data hiding/encapsulation
+*/
+//disadvantages of closures
+/**
+ * memory leaks/overconsumption of memory
+ * closed over variable will not be garbage collected (even if the outer function has run, the returned
+ * inner function still has a refernce to the closed-over-variable)
+ */
