@@ -116,3 +116,20 @@ console.log(parseFloat("55px"));
 console.log(parseFloat("2.79"));
 //can also use Number() converts a string to a number 
 console.log(Number("12"));
+
+
+//typeof operator returns a string indicating the type of the operand
+console.log(typeof(122)); //number
+console.log(typeof("Hi")); //string
+console.log(typeof({name: "Jane Doe"})); //object
+console.log(typeof(true)); //boolean
+
+//default function parameters -> allow named parameters to be initialized with default valurs if no value or undefined
+//is passed
+
+function sumOfTwo(x, y=1) {
+    return x + y;
+}
+
+console.log(sumOfTwo(10, 10)); //20
+console.log(sumOfTwo(1)); //2
