@@ -77,7 +77,8 @@ let newname = "John";
 //how to check if variable is not Nan?
 console.log(isNaN(num)); //false as it is num
 console.log(isNaN(newname));//true
-
+//n.b if using isNaN will need to do further checks, i.e
+console.log(isNaN('123')); //false
 
 
 //on floats -> is 0.1 + 0.2 === 0.3  -> false
@@ -104,3 +105,14 @@ function TryMe2() {
 }
 
 console.log(TryMe2()); //Object {cat: "Prince"}
+
+
+//convert a string to an int
+
+//parseInt converts to a whole number
+console.log(parseInt("30"));
+//parseFloat converts to a pointnumber with a decimal
+console.log(parseFloat("55px"));
+console.log(parseFloat("2.79"));
+//can also use Number() converts a string to a number 
+console.log(Number("12"));
