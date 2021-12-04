@@ -54,3 +54,53 @@ const myObject2 = {
 };
 
 myObject2.doSomethingMore();
+
+//constructor function
+//constructor function is called with new keyword and returns the value of this, does not point to outer object,
+//used as placeholder object
+
+function Animal(name, type) {
+    this.name = name;
+    this.type = type;
+    //do not need to return as automatically returned
+}
+
+const myPet = new Animal("Prince", "cat");
+console.log(myPet.name);
+
+
+//Nan === Nan -> false
+//just because both not a number does not mean that the type will match
+
+let num = 7;
+let newname = "John";
+//how to check if variable is not Nan?
+console.log(isNaN(num)); //false as it is num
+console.log(isNaN(newname));//true
+
+
+
+//on floats -> is 0.1 + 0.2 === 0.3  -> false
+console.log(0.1 + 0.2 === 0.3); //false
+let thissum = 0.1 + 0.2;
+console.log(thissum) // 0.30000000004
+
+//output of the below code
+
+function TryMe() {
+    return 
+    {
+        cat: "Prince"
+    }
+}
+console.log(TryMe()); //undefined unreachable code
+//JS will inject semicolong after return on line 91 and treat 92-94 as scope rather than object definition
+function TryMe2() {
+    const newobj = {
+        cat: "Prince"
+    }
+
+    return newobj;
+}
+
+console.log(TryMe2()); //Object {cat: "Prince"}
