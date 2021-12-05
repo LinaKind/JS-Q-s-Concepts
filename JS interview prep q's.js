@@ -109,3 +109,7 @@ const two = () => {
     console.log("Arrow function");
 }
 
+//Math.pow() retur the base to the exponent power, as in base^exponent
+
+console.log(Math.pow(2, 2)); //4
+console.log(Math.pow(7, 3)); //343
