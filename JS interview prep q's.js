@@ -113,3 +113,27 @@ const two = () => {
 
 console.log(Math.pow(2, 2)); //4
 console.log(Math.pow(7, 3)); //343
+
+
+//** Debouncing**/
+//adds delay to a function
+//setTimeou to add delay in miliseconds
+//clearTimeout to remove it
+
+//print timer with delay
+
+const tenTimer = () => {
+    let count = 10;
+    for (let i = 0; i < 10; i++) {
+        function timer(i) {
+            setTimeout(() => {
+                console.log(count);
+                count--;
+            }, i * 500)
+        }
+        timer(i);
+    }
+
+}
+
+tenTimer();
