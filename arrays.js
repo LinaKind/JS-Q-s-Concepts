@@ -66,7 +66,64 @@ console.log(filteredArray);
 const duplicateValues = duplicatesArr.filter((num, index) => duplicatesArr.indexOf(num)  !== index);
 console.log(duplicateValues);
 
-//using reduce --> reducer is checking if an array contains an item already
-const reduceArray = duplicatesArr.reduce((unique, item) => {
-    return unique.includes(item) ? unique : [...unique, item];
-})
+
+
+//find Max/Min from the array
+
+let maxminarray = [100, 3547, 2, 0, 9];
+
+let min = Math.min(...maxminarray);
+let max = Math.max(...maxminarray);
+console.log(min);//0
+console.log(max);//3547
+
+//** Sorting An Array**/
+//sort() method sorts the elements of an array in place and returns sorted array
+//default sort order is ascending
+//converting elements to strigs and compering their sequences 
+let arrayToSort = ["John", "Anna", "Mary", "Jane"];
+let numToSort = [1, 999, 7, 6, 24];
+
+console.log(arrayToSort.sort());
+
+//to compare numbers numbers not strings
+
+// numToSort.sort(function(a, b) {
+//     return a - b
+// });
+
+
+
+//ES6 syntax
+
+numToSort.sort((a,b) => a-b);
+
+//sort in descending order
+//numToSort.sort((a,b) => b-a);
+
+console.log(numToSort);
+
+//** Merge an Array**/
+
+//concat() method used to merge two or more arrats, does not change the existing arrays, but instead returns a new array
+const array1 = ["a", "b", "c"];
+const array2 = ["d", "e", "f"];
+
+const array3 = array1.concat(array2);
+console.log(array3);
+
+//can also merge using spread operator --also creates a new array
+
+const arrayOne = [1, 2, 3];
+const arrayTwo = [4, 5, 6];
+
+const mergedArray = [...arrayOne, ...arrayTwo];
+console.log(mergedArray);
+
+//if you DO NOT WANT to create a new array and merge with the existing one
+
+const arrayThree = [7, 8, 9];
+const arrayFour = [10, 11, 12];
+
+arrayThree.push(...arrayFour);
+console.log(arrayThree);
