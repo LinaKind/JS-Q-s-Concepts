@@ -127,3 +127,30 @@ const arrayFour = [10, 11, 12];
 
 arrayThree.push(...arrayFour);
 console.log(arrayThree);
+
+
+/** Slice vs splice
+ * splice() method returns the removed item(s) in an array and slice() method returns
+ * the selected element(s) in an array
+ * splice() --> changes the original array
+ * slice() --> does not change the original array
+ * **/
+
+
+//Use flatMap to loop over two arrays 
+const arrayOfYear = [1992, 1995, 1988, 2000];
+const arrayOfMonths = ['January', 'February', 'March', 'April'];
+
+const newSetUp = arrayOfYear.flatMap((year) => {
+    //NB need a second parenthesis .... why?
+    return arrayOfMonths.map((month) => ({
+        year, month
+    }))
+})
+
+newSetUp.forEach(({year, month}) => {
+    console.log(year, month);
+})
+
+//Use flatMap to loop over an array and an array of objects
+
