@@ -105,7 +105,7 @@ console.log(numToSort);
 
 //** Merge an Array**/
 
-//concat() method used to merge two or more arrats, does not change the existing arrays, but instead returns a new array
+//concat() method used to merge two or more arrays, does not change the existing arrays, but instead returns a new array
 const array1 = ["a", "b", "c"];
 const array2 = ["d", "e", "f"];
 
@@ -153,4 +153,6 @@ newSetUp.forEach(({year, month}) => {
 })
 
 //Use flatMap to loop over an array and an array of objects
+
+
 
