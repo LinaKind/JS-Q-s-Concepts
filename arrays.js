@@ -154,5 +154,20 @@ newSetUp.forEach(({year, month}) => {
 
 //Use flatMap to loop over an array and an array of objects
 
-
-
+//move zero's to the end 
+let nums = [0,0,0,3,4,5]
+const moveZeroes = function(nums) {
+    let counter = 0
+    for (i=0; i < nums.length; i++) {
+        if (nums[i] === 0) {
+            counter++
+            nums.splice(i, 1);
+            //this is required as splice will change the indices of the arrays
+            i--
+        }
+    }
+    for (let i =0; i< counter; i++) {
+        nums.push(0)
+    }
+    return nums
+};
